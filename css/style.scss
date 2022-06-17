@@ -1,0 +1,339 @@
+body {
+    margin: 1.5em;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../images/rocket.jpg');
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    // used to fix the img to width of screen
+    width: 100%;
+    // used to fit the img to the height of the viewport
+    height: 100vh;
+    // used for send back or forwards
+    z-index: -1;
+    animation: introLoad 2s forwards;
+
+    //overflow: hidden;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+    // Used to stop nav from dissapearing when scrolling
+    position: fixed;
+    // position from the top
+    top: 0;
+    // position from the right
+    right: 0;
+
+    background: white;
+    height: 100vh;
+    width: 50%;
+    // ensure when called upon it is the top displayed layer
+    z-index: 999;
+    // make text upper case
+    text-transform: uppercase;
+    // used to high the navigation bar for the animation
+    transform: translateX(100%);
+    // used to specify what propertie should animate
+    // for a duration of .5 sec ease-in-out
+    transition: transform .5 ease-in-out;
+
+
+    // nest used to style the list elements
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8em;
+
+        // used to style the links within the list
+        a {
+            color: black;
+            // padding on a link element will not work unless its display block
+            padding: .75em 2em;
+            display: block;
+
+            // on this a element we are going to have a hover 
+            &:hover {
+                background: rgb(227, 226, 226);
+            }
+        }
+    }
+
+    .close {
+        float: right;
+        margin: 2em;
+        width: 2.5em;
+    }
+
+}
+
+header {
+    //used to structure the layout
+    display: flex;
+    // used to create space between logo and nav
+    justify-content: space-between;
+
+    // nesting svg inside of header
+    // Understood as any svg inside of header
+    svg {
+        width: 2.3em;
+        margin-top: -.6em;
+        cursor: pointer;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 2em;
+    line-height: 3.3rem;
+}
+
+.subhead {
+    font-size: 1.4rem;
+}
+
+span {
+    color: green;
+}
+
+section.hero {
+    color: white;
+    height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
+
+    .down-arrow {
+        stroke: white;
+        position: absolute;
+        bottom: 2em;
+        width: 1em;
+        animation: bouncyArrow 1s alternate-reverse infinite;
+
+        path {
+            fill: white;
+        }
+    }
+}
+
+.more-info {
+    img {
+        width: 100%;
+        // keeps image from distorting
+        object-fit: cover;
+        height: 11em;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .desc {
+        line-height: 1.5rem;
+    }
+}
+
+// CSS for JS animation of menu 
+.open-nav {
+    transform: translateX(0%) 
+    
+}
+
+
+// media queries used to readjust the page for different devices
+// the below query is an example meaning once the page dimensions reach
+// 680 pixels only the rules below will count
+@media only screen and (min-width:680px) {
+
+    body {
+        // added 5 em white space to left and right of body when dimension exceeds 680
+        margin: 1.5em 5em;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+}
+
+@media only screen and (min-width:920px) {
+
+    // to hide popout menu at 920 pixels
+    .menu {
+        display: none;
+    }
+
+    // makes the nav show up at 920px
+    nav {
+        transform: translateX(0);
+
+        //in order to change nav from appearing as the mobile version
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+
+        // makes the close button from mobile dissapear
+        svg.close {
+            display: none;
+        }
+
+        ul {
+            // flex makes any child element become columns
+            display: flex;
+            margin: 0;
+
+            a {
+                color: white;
+                padding: .5em 1.5;
+                font-size: 0.9rem;
+
+
+                &:hover {
+                    background: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .hero-img {
+        left: unset;
+        right: 0;
+        width: 50%;
+        height: 42em;
+    }
+
+    .logo {
+        color: black;
+
+        span {
+            color: green;
+        }
+    }
+
+    section.hero {
+        color: black;
+        height: auto;
+        width: 40%;
+        margin-bottom: 8em;
+        padding-bottom: 2.5em;
+
+        svg.down-arrow {
+            stroke: black;
+            position: unset;
+            animation: bouncyArrow2 1s alternate-reverse infinite;
+
+            path {
+                fill: black;
+            }
+        }
+    }
+
+    .feature {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 3em;
+        margin-bottom: 8em;
+
+        img {
+            width: 25em;
+        }
+
+        .content {
+            text-align: right;
+            width: 25em;
+        }
+    }
+
+    .feature.left {
+        // naming columns within display grid
+        grid-template-areas:
+            "left right";
+
+        img {
+            grid-area: left;
+        }
+
+        .content {
+            text-align: left;
+            width: 25em;
+            justify-self: left;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width:1200px) {
+
+    .wrapper {
+        // the wrappers max width
+        width: 1200px;
+        // keeps everything centered
+        margin: 0 auto;
+    }
+
+    .feature {
+        gap: 0;
+    }
+}
+
+// defining keyframe animation
+@keyframes introLoad {
+    from {
+        // css clippy
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+
+    }
+}
+
+@keyframes bouncyArrow {
+    from {
+        transform: translateY(-55px)
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bouncyArrow2 {
+    from {
+        transform: translateY(-20px)
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

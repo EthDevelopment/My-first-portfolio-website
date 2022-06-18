@@ -4,6 +4,11 @@ body {
   background: black;
   color: white;
   background: url("../images/darkStar.jpg");
+  background-size: cover;
+  background-position: 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 a {
@@ -32,8 +37,6 @@ a {
 
 .hero-img {
   position: absolute;
-  top: 0;
-  left: 0;
   background: url("../images/darkStar.jpg");
   background-size: cover;
   background-position-x: 20%;
@@ -276,11 +279,16 @@ footer {
 
 @media only screen and (min-width: 680px) {
   body {
-    margin: 1.5em 5em;
+    margin: 2.5em 5em;
     font-family: "Poppins", sans-serif;
   }
 }
 @media only screen and (min-width: 920px) {
+  body {
+    margin: 0 10em;
+    font-family: "Poppins", sans-serif;
+  }
+
   .menu {
     display: none;
   }
@@ -292,6 +300,9 @@ footer {
     width: auto;
     height: auto;
     background: none;
+  }
+  nav .top-tap {
+    display: none;
   }
   nav svg.close {
     display: none;
@@ -313,8 +324,8 @@ footer {
   .hero-img {
     left: unset;
     right: 0;
-    width: 50%;
-    height: 42em;
+    width: 100%;
+    height: 100vh;
   }
 
   .logo {
@@ -326,10 +337,18 @@ footer {
 
   section.hero {
     color: white;
-    height: auto;
-    width: 40%;
+    height: 90vh;
+    width: 100%;
     margin-bottom: 8em;
     padding-bottom: 2.5em;
+  }
+
+  .about-section {
+    font-size: 2em;
+  }
+
+  .about-div {
+    margin: 0 10em;
   }
 }
 @media only screen and (min-width: 1200px) {

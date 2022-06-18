@@ -210,6 +210,16 @@ section.hero {
             li {
                 font-weight: bold;
                 margin: 40px 0;
+
+                a {
+                    color: white;
+                    // padding on a link element will not work unless its display block
+
+                    // on this a element we are going to have a hover 
+                    &:hover {
+                        color: orange;
+                    }
+                }
             }
         }
     }

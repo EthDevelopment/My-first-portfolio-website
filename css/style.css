@@ -163,6 +163,12 @@ section.hero .down-arrow path {
   font-weight: bold;
   margin: 40px 0;
 }
+.projects-section .projects-div .projects li a {
+  color: white;
+}
+.projects-section .projects-div .projects li a:hover {
+  color: orange;
+}
 
 .about-section {
   background: url(../images/darkStar.jpg);

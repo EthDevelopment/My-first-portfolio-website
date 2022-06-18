@@ -69,7 +69,7 @@ nav {
 
     background: black;
     height: 100vh;
-    width: 23%;
+    width: 40%;
     // ensure when called upon it is the top displayed layer
     z-index: 999;
     // make text upper case
@@ -220,10 +220,10 @@ section.hero {
     background: url(../images/darkStar.jpg);
     background-size: cover;
     z-index: -1;
-    background-position-x: 20%;
-    background-position-y: 20%;
+    background-position-x: 100%;
+    background-position-y: 100%;
     width: 100%;
-    height: 140vh;
+    height: 120vh;
     animation: introLoad 2s forwards;
     .about-div {
         .title {       
@@ -399,7 +399,6 @@ footer{
         // added 5 em white space to left and right of body when dimension exceeds 680
         margin: 2.5em 5em;
         font-family: 'Poppins', sans-serif;
-
     }
 
 }
@@ -417,6 +416,10 @@ footer{
         display: none;
     }
 
+    ul.top-tag{
+        display: none;
+    }
+
     // makes the nav show up at 920px
     nav {
         transform: translateX(0);
@@ -427,10 +430,6 @@ footer{
         width: auto;
         height: auto;
         background: none;
-
-        .top-tap{
-            display: none;
-        }
 
         // makes the close button from mobile dissapear
         svg.close {

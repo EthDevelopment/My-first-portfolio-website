@@ -59,7 +59,7 @@ nav {
   right: 0;
   background: black;
   height: 100vh;
-  width: 23%;
+  width: 40%;
   z-index: 999;
   text-transform: uppercase;
   transform: translateX(100%);
@@ -168,10 +168,10 @@ section.hero .down-arrow path {
   background: url(../images/darkStar.jpg);
   background-size: cover;
   z-index: -1;
-  background-position-x: 20%;
-  background-position-y: 20%;
+  background-position-x: 100%;
+  background-position-y: 100%;
   width: 100%;
-  height: 140vh;
+  height: 120vh;
   -webkit-animation: introLoad 2s forwards;
           animation: introLoad 2s forwards;
 }
@@ -332,6 +332,10 @@ footer {
     display: none;
   }
 
+  ul.top-tag {
+    display: none;
+  }
+
   nav {
     transform: translateX(0);
     position: unset;
@@ -339,9 +343,6 @@ footer {
     width: auto;
     height: auto;
     background: none;
-  }
-  nav .top-tap {
-    display: none;
   }
   nav svg.close {
     display: none;

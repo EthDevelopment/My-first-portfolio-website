@@ -1,6 +1,9 @@
 body {
   margin: 1.5em;
   font-family: "Poppins", sans-serif;
+  background: black;
+  color: white;
+  background: url("../images/darkStar.jpg");
 }
 
 a {
@@ -8,11 +11,30 @@ a {
   font-size: 1.3rem;
 }
 
+.globe {
+  border: 2px solid orange;
+  border-radius: 50%;
+  height: 140px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+}
+.globe svg {
+  -webkit-animation: rotation 5s linear 0s infinite;
+          animation: rotation 5s linear 0s infinite;
+}
+.globe svg path {
+  stroke: orange;
+}
+
 .hero-img {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../images/rocket.jpg");
+  background: url("../images/darkStar.jpg");
   background-size: cover;
   background-position-x: 20%;
   background-position-y: 20%;
@@ -32,7 +54,7 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  background: white;
+  background: black;
   height: 100vh;
   width: 50%;
   z-index: 999;
@@ -46,17 +68,20 @@ nav ul {
   margin-top: 8em;
 }
 nav ul a {
-  color: black;
+  color: white;
   padding: 0.75em 2em;
   display: block;
 }
 nav ul a:hover {
-  background: rgb(227, 226, 226);
+  background: rgb(42, 41, 41);
 }
 nav .close {
   float: right;
   margin: 2em;
   width: 2.5em;
+}
+nav .close path {
+  fill: white;
 }
 
 header {
@@ -70,9 +95,10 @@ header svg {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.8rem;
   margin-top: 2em;
   line-height: 3.3rem;
+  text-align: center;
 }
 
 .subhead {
@@ -80,7 +106,7 @@ h1 {
 }
 
 span {
-  color: green;
+  color: orange;
 }
 
 section.hero {
@@ -92,27 +118,156 @@ section.hero {
 }
 section.hero .down-arrow {
   stroke: white;
-  position: absolute;
+  position: fixed;
+  align-tracks: center;
   bottom: 2em;
-  width: 1em;
-  animation: bouncyArrow 1s alternate-reverse infinite;
+  width: 2em;
+  height: 5em;
+  animation: bouncyArrow 1.8s alternate-reverse infinite;
 }
 section.hero .down-arrow path {
   fill: white;
 }
 
-.more-info img {
+.projects-section {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 11em;
+  height: 100vh;
 }
-.more-info .title {
+.projects-section .projects-div .title {
+  position: relative;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 4.25rem;
+  display: block;
+  text-align: center;
+  top: 0;
 }
-.more-info .desc {
+.projects-section .projects-div .projects {
   line-height: 1.5rem;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  font-size: 1.7rem;
+  margin-bottom: 40;
+}
+.projects-section .projects-div .projects li {
+  font-weight: bold;
+  margin: 40px 0;
+}
+
+.about-section {
+  width: 100%;
+  height: 100vh;
+}
+.about-section .about-div .title {
+  position: relative;
+  font-weight: bold;
+  font-size: 3.25rem;
+  display: block;
+  text-align: center;
+  top: 0;
+}
+.about-section .about-div .title .stroke-span {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+.about-section .about-div .about-p {
+  line-height: 1.5rem;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  font-size: 1.2rem;
+  margin-bottom: 40;
+  padding-left: 0em;
+  padding-right: 3em;
+}
+.about-section .about-div .about-p li {
+  font-weight: bold;
+  margin: 40px 0;
+}
+
+.connection-section .connect-div {
+  width: 100%;
+  height: 100vh;
+}
+.connection-section .connect-div .title {
+  position: relative;
+  font-weight: bold;
+  font-size: 4.25rem;
+  display: block;
+  text-align: center;
+  top: 0;
+}
+.connection-section .connect-div .connect-header {
+  text-align: center;
+}
+.connection-section .connect-div .connect-header:hover {
+  color: orange;
+}
+.connection-section .connect-div .connect-header:hover span {
+  color: white;
+}
+.connection-section .connect-div .email-address {
+  text-align: center;
+  font-weight: bold;
+}
+.connection-section .connect-div .CV-link {
+  margin-top: 1em;
+  text-align: center;
+}
+.connection-section .connect-div .CV-link span {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.connection-section .connect-div .connect-links {
+  line-height: 1.5rem;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  font-size: 2.3rem;
+  margin-bottom: 40;
+}
+.connection-section .connect-div .connect-links .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+}
+.connection-section .connect-div .connect-links .close path {
+  fill: white;
+}
+.connection-section .connect-div .connect-links a .linkedin-logo {
+  width: 2em;
+  height: 2em;
+}
+.connection-section .connect-div .connect-links a .linkedin-logo path {
+  fill: orange;
+}
+.connection-section .connect-div .connect-links a .twitter-logo {
+  width: 2em;
+  height: 2em;
+}
+.connection-section .connect-div .connect-links a .twitter-logo path {
+  fill: orange;
+}
+.connection-section .connect-div .connect-links a .fiverr-logo {
+  width: 2em;
+  height: 2em;
+}
+.connection-section .connect-div .connect-links a .fiverr-logo path {
+  fill: orange;
+}
+.connection-section .connect-div .connect-links a .IG-logo {
+  width: 2em;
+  height: 2em;
+}
+.connection-section .connect-div .connect-links a .IG-logo path {
+  fill: orange;
+}
+.connection-section .connect-div .connect-links a .IG-logo:hover {
+  fill: orange;
+}
+
+footer {
+  text-align: center;
 }
 
 .open-nav {
@@ -163,52 +318,23 @@ section.hero .down-arrow path {
   }
 
   .logo {
-    color: black;
+    color: white;
   }
   .logo span {
-    color: green;
+    color: orange;
   }
 
   section.hero {
-    color: black;
+    color: white;
     height: auto;
-    width: 40%;
+    width: 100%;
     margin-bottom: 8em;
-    padding-bottom: 2.5em;
+    padding-bottom: 35.5em;
+    font-size: 1.5em;
   }
-  section.hero svg.down-arrow {
-    stroke: black;
-    position: unset;
-    animation: bouncyArrow2 1s alternate-reverse infinite;
-  }
-  section.hero svg.down-arrow path {
-    fill: black;
-  }
-
-  .feature {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 3em;
-    margin-bottom: 8em;
-  }
-  .feature img {
-    width: 25em;
-  }
-  .feature .content {
-    text-align: right;
-    width: 25em;
-  }
-
-  .feature.left {
-    grid-template-areas: "left right";
-  }
-  .feature.left img {
-    grid-area: left;
-  }
-  .feature.left .content {
-    text-align: left;
-    width: 25em;
-    justify-self: left;
+  section.hero .down-arrow {
+    margin-top: auto;
+    bottom: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -243,34 +369,22 @@ section.hero .down-arrow path {
 }
 @-webkit-keyframes bouncyArrow {
   from {
-    transform: translateY(-55px);
+    opacity: 0;
+    transform: translateY(-35px);
   }
   to {
     transform: translateY(-15px);
+    opacity: 1;
   }
 }
 @keyframes bouncyArrow {
   from {
-    transform: translateY(-55px);
+    opacity: 0;
+    transform: translateY(-35px);
   }
   to {
     transform: translateY(-15px);
-  }
-}
-@-webkit-keyframes bouncyArrow2 {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(20px);
-  }
-}
-@keyframes bouncyArrow2 {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(20px);
+    opacity: 1;
   }
 }
 @-webkit-keyframes moveDown {
@@ -289,5 +403,21 @@ section.hero .down-arrow path {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(-50%);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(-50%);
   }
 }/*# sourceMappingURL=style.css.map */

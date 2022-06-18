@@ -165,9 +165,28 @@ section.hero {
 
 }
 
+    // position: absolute;
+    //     background: url('../images/darkStar.jpg');
+    //     background-size: cover;
+    //     background-position-x: 20%;
+    //     background-position-y: 20%;
+    //     // used to fix the img to width of screen
+    //     width: 100%;
+    //     // used to fit the img to the height of the viewport
+    //     height: 100vh;
+    //     // used for send back or forwards
+    //     z-index: -1;
+    //     animation: introLoad 2s forwards;
+
 .projects-section {
+    background: url(../images/darkStar.jpg);
+    background-size: cover;
+    z-index: -1;
+    background-position-x: 20%;
+    background-position-y: 20%;
     width: 100%;
     height: 100vh;
+    animation: introLoad 2s forwards;
     .projects-div {
  
 
@@ -443,7 +462,7 @@ footer{
     }
 
     .about-div{
-        margin: 0 10em;
+        margin: 0 1em;
     }
    
     
@@ -458,9 +477,14 @@ footer{
         margin: 0 auto;
     }
 
-    .feature {
-        gap: 0;
+    .about-section{
+        font-size: 2em;
     }
+
+    .about-div{
+        margin: 0 5em;
+    }
+
 }
 
 // defining keyframe animation
@@ -511,4 +535,5 @@ footer{
     from {
       transform: translateX(-50%);
     }    
+    
 }

@@ -178,7 +178,7 @@ section.hero .down-arrow path {
 .about-section .about-div .title {
   position: relative;
   font-weight: bold;
-  font-size: 3.25rem;
+  font-size: 2.3rem;
   display: block;
   text-align: center;
   top: 0;
@@ -192,7 +192,7 @@ section.hero .down-arrow path {
   margin-bottom: 0.02em;
 }
 .about-section .about-div .myName {
-  font-size: 3.5rem;
+  font-size: 2.3rem;
 }
 .about-section .about-div .about-p {
   line-height: 1rem;

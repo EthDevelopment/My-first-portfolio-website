@@ -1,5 +1,4 @@
 body {
-    margin: 1.5em;
     font-family: 'Poppins', sans-serif;
     background: black;
     color: white;
@@ -121,6 +120,7 @@ header {
 
     // nesting svg inside of header
     // Understood as any svg inside of header
+    // Menu Button for smaller resolutions
     svg {
         width: 2.3em;
         margin-top: -.6em;
@@ -209,7 +209,7 @@ section.hero {
 
             li {
                 font-weight: bold;
-                margin: 40px 0;
+                margin: 4rem 0;
 
                 a {
                     color: white;
@@ -266,10 +266,7 @@ section.hero {
             margin-bottom: 40;
             padding-left: 0em;
             padding-right: 3em;
-            li {
-                font-weight: bold;
-                margin: 40px 0;
-            }
+           
         }
     }
 }
@@ -407,8 +404,8 @@ footer{
 
     body {
         // added 5 em white space to left and right of body when dimension exceeds 680
-        margin: 2.5em 5em;
         font-family: 'Poppins', sans-serif;
+        
     }
 
 }
@@ -416,7 +413,6 @@ footer{
 @media only screen and (min-width:920px) {
     body {
         // added 5 em white space to left and right of body when dimension exceeds 680
-        margin: 0 10em;
         font-family: 'Poppins', sans-serif;
 
     }
@@ -508,7 +504,7 @@ footer{
 
     .wrapper {
         // the wrappers max width
-        
+        width: 1200px;
         // keeps everything centered
         margin: 0 auto;
     }

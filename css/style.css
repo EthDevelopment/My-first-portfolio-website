@@ -1,5 +1,4 @@
 body {
-  margin: 1.5em;
   font-family: "Poppins", sans-serif;
   background: black;
   color: white;
@@ -161,7 +160,7 @@ section.hero .down-arrow path {
 }
 .projects-section .projects-div .projects li {
   font-weight: bold;
-  margin: 40px 0;
+  margin: 4rem 0;
 }
 .projects-section .projects-div .projects li a {
   color: white;
@@ -209,10 +208,6 @@ section.hero .down-arrow path {
   margin-bottom: 40;
   padding-left: 0em;
   padding-right: 3em;
-}
-.about-section .about-div .about-p li {
-  font-weight: bold;
-  margin: 40px 0;
 }
 
 .connection-section {
@@ -324,13 +319,11 @@ footer {
 
 @media only screen and (min-width: 680px) {
   body {
-    margin: 2.5em 5em;
     font-family: "Poppins", sans-serif;
   }
 }
 @media only screen and (min-width: 920px) {
   body {
-    margin: 0 10em;
     font-family: "Poppins", sans-serif;
   }
 
@@ -399,6 +392,7 @@ footer {
 }
 @media only screen and (min-width: 1200px) {
   .wrapper {
+    width: 1200px;
     margin: 0 auto;
   }
 

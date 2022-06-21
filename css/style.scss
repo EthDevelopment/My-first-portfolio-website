@@ -69,7 +69,7 @@ nav {
 
     background: black;
     height: 100vh;
-    width: 40%;
+    width:60%;
     // ensure when called upon it is the top displayed layer
     z-index: 999;
     // make text upper case
@@ -508,7 +508,7 @@ footer{
 
     .wrapper {
         // the wrappers max width
-        width: 1200px;
+        
         // keeps everything centered
         margin: 0 auto;
     }

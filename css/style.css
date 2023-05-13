@@ -1,89 +1,11 @@
-body {
+html {
   font-family: "Poppins", sans-serif;
-  background: black;
-  color: white;
-  background: url("../images/darkStar.jpg");
-  background-size: cover;
-  background-position: 20%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-a {
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-
-.globe {
-  border: 2px solid orange;
-  border-radius: 50%;
-  height: 140px;
-  left: 50%;
-  overflow: hidden;
-  position: absolute;
-  top: 60%;
-  transform: translate(-50%, -50%);
-  width: 140px;
-}
-.globe svg {
-  -webkit-animation: rotation 5s linear 0s infinite;
-          animation: rotation 5s linear 0s infinite;
-}
-.globe svg path {
-  stroke: orange;
-}
-
-.hero-img {
-  position: absolute;
-  background: url("../images/darkStar.jpg");
+  background: lightblue;
   background-size: cover;
   background-position-x: 20%;
   background-position-y: 20%;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
-}
-
-.logo {
-  color: white;
-  font-weight: bold;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: black;
-  height: 100vh;
-  width: 60%;
-  z-index: 999;
-  text-transform: uppercase;
-  transform: translateX(100%);
-  transition: transform 0.5 ease-in-out;
-}
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 8em;
-}
-nav ul a {
-  color: white;
-  padding: 0.75em 2em;
-  display: block;
-}
-nav ul a:hover {
-  background: rgb(42, 41, 41);
-}
-nav .close {
-  float: right;
-  margin: 2em;
-  width: 2.5em;
-}
-nav .close path {
-  fill: white;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 header {
@@ -95,54 +17,90 @@ header svg {
   margin-top: -0.6em;
   cursor: pointer;
 }
-
-h1 {
-  font-size: 1.8rem;
-  margin-top: 2em;
-  line-height: 3.3rem;
-  text-align: center;
+header .logo {
+  color: white;
+  font-weight: bold;
+  font-family: "Darumadrop One", cursive;
+  font-size: 4rem;
+  text-decoration: none;
 }
-
-.subhead {
-  font-size: 1.4rem;
+header nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: black;
+  height: 100vh;
+  width: 60%;
+  z-index: 999;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.5 ease-in-out;
 }
-
-span {
-  color: orange;
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8em;
+}
+header nav ul a {
+  color: white;
+  padding: 0.75em 2em;
+  display: block;
+}
+header nav ul a:hover {
+  background: rgb(42, 41, 41);
+}
+header nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+}
+header nav .close path {
+  fill: white;
 }
 
 section.hero {
   color: white;
-  height: 90vh;
-  -webkit-animation: moveDown 1s ease-in-out forwards;
-          animation: moveDown 1s ease-in-out forwards;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: moveDown 1s ease-in-out forwards;
   opacity: 0;
+}
+section.hero .heroTxt {
+  color: white;
+  font-family: "Darumadrop One", cursive;
+  font-size: 7.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+section.hero .heroTxt span {
+  color: white;
 }
 section.hero .down-arrow {
   stroke: white;
   position: fixed;
-  align-tracks: center;
-  bottom: 2em;
-  width: 2em;
+  left: 50%; /* position the element 50% from the left */
+  bottom: 6em;
+  transform: translateX(-50%); /* center the element horizontally */
   height: 5em;
   animation: bouncyArrow 1.8s alternate-reverse infinite;
+  font-size: 0.5rem;
 }
 section.hero .down-arrow path {
   fill: white;
 }
 
 .projects-section {
-  background: url(../images/darkStar.jpg);
-  background-size: cover;
   z-index: -1;
   background-position-x: 20%;
   background-position-y: 20%;
   width: 100%;
   height: 100vh;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
 .projects-section .projects-div .title {
+  font-family: "Darumadrop One", cursive;
   position: relative;
   font-weight: bold;
   font-size: 4.25rem;
@@ -166,19 +124,17 @@ section.hero .down-arrow path {
   color: white;
 }
 .projects-section .projects-div .projects li a:hover {
-  color: orange;
+  color: green;
 }
 
 .about-section {
-  background: url(../images/darkStar.jpg);
   background-size: cover;
   z-index: -1;
   background-position-x: 100%;
   background-position-y: 100%;
   width: 100%;
   height: 120vh;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
 .about-section .about-div .title {
   position: relative;
@@ -211,15 +167,12 @@ section.hero .down-arrow path {
 }
 
 .connection-section {
-  background: url(../images/darkStar.jpg);
-  background-size: cover;
   z-index: -1;
   background-position-x: 20%;
   background-position-y: 20%;
   width: 100%;
   height: 100vh;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
 .connection-section .connect-div {
   width: 100%;
@@ -237,7 +190,7 @@ section.hero .down-arrow path {
   text-align: center;
 }
 .connection-section .connect-div .connect-header:hover {
-  color: orange;
+  color: green;
 }
 .connection-section .connect-div .connect-header:hover span {
   color: white;
@@ -282,31 +235,31 @@ section.hero .down-arrow path {
   height: 2em;
 }
 .connection-section .connect-div .connect-links a .linkedin-logo path {
-  fill: orange;
+  fill: white;
 }
 .connection-section .connect-div .connect-links a .twitter-logo {
   width: 2em;
   height: 2em;
 }
 .connection-section .connect-div .connect-links a .twitter-logo path {
-  fill: orange;
+  fill: white;
 }
 .connection-section .connect-div .connect-links a .fiverr-logo {
   width: 2em;
   height: 2em;
 }
 .connection-section .connect-div .connect-links a .fiverr-logo path {
-  fill: orange;
+  fill: white;
 }
 .connection-section .connect-div .connect-links a .IG-logo {
   width: 2em;
   height: 2em;
 }
 .connection-section .connect-div .connect-links a .IG-logo path {
-  fill: orange;
+  fill: white;
 }
 .connection-section .connect-div .connect-links a .IG-logo:hover {
-  fill: orange;
+  fill: green;
 }
 
 footer {
@@ -324,17 +277,14 @@ footer {
 }
 @media only screen and (min-width: 920px) {
   body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Darumadrop One", cursive;
   }
-
   .menu {
     display: none;
   }
-
   ul.top-tag {
     display: none;
   }
-
   nav {
     transform: translateX(0);
     position: unset;
@@ -359,21 +309,6 @@ footer {
     background: none;
     text-decoration: underline;
   }
-
-  .hero-img {
-    left: unset;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-  }
-
-  .logo {
-    color: white;
-  }
-  .logo span {
-    color: orange;
-  }
-
   section.hero {
     color: white;
     height: 90vh;
@@ -381,11 +316,9 @@ footer {
     margin-bottom: 8em;
     padding-bottom: 2.5em;
   }
-
   .about-section {
     font-size: 2em;
   }
-
   .about-div {
     margin: 0 1em;
   }
@@ -395,23 +328,11 @@ footer {
     width: 1200px;
     margin: 0 auto;
   }
-
   .about-section {
     font-size: 2em;
   }
-
   .about-div {
     margin: 0 5em;
-  }
-}
-@-webkit-keyframes introLoad {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 @keyframes introLoad {
@@ -424,16 +345,6 @@ footer {
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
-@-webkit-keyframes bouncyArrow {
-  from {
-    opacity: 0;
-    transform: translateY(-35px);
-  }
-  to {
-    transform: translateY(-15px);
-    opacity: 1;
-  }
-}
 @keyframes bouncyArrow {
   from {
     opacity: 0;
@@ -444,15 +355,6 @@ footer {
     opacity: 1;
   }
 }
-@-webkit-keyframes moveDown {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @keyframes moveDown {
   from {
     transform: translateY(-100px);
@@ -460,14 +362,6 @@ footer {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-@-webkit-keyframes rotation {
-  from {
-    transform: translateX(0);
-  }
-  from {
-    transform: translateX(-50%);
   }
 }
 @keyframes rotation {

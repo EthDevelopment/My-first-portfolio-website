@@ -1,186 +1,135 @@
-body {
+html {
     font-family: 'Poppins', sans-serif;
-    background: black;
-    color: white;
-    background: url('../images/darkStar.jpg');
-    background-size: cover;
-    background-position: 20%;
-    height: fit-content;
-
-}
-
-a {
-    text-decoration: none;
-    font-size: 1.3rem;
-}
-
-// CSS to join globe pieces 
-// Pangi WHO?? xD
-.globe {
-    border: 2px solid orange;
-    border-radius: 50%;
-    height: 140px;
-    left: 50%;
-    overflow: hidden;
-    position: absolute;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    width: 140px;
-    
-    svg {
-      animation: rotation 5s linear 0s infinite;
-      
-      path {
-        stroke: orange;
-      }
-    }
-  }
-
-.hero-img {
-    position: absolute;
-    background: url('../images/darkStar.jpg');
+    background: lightblue;
     background-size: cover;
     background-position-x: 20%;
     background-position-y: 20%;
-    // used to fix the img to width of screen
-    width: 100%;
-    // used to fit the img to the height of the viewport
-    height: 100vh;
-    // used for send back or forwards
-    z-index: -1;
-    animation: introLoad 2s forwards;
-
-    //overflow: hidden;
+    height: fit-content;
 }
 
-.logo {
-    color: white;
-    font-weight: bold;
-}
-
-nav {
-    // Used to stop nav from dissapearing when scrolling
-    position: fixed;
-    // position from the top
-    top: 0;
-    // position from the right
-    right: 0;
-
-    background: black;
-    height: 100vh;
-    width:60%;
-    // ensure when called upon it is the top displayed layer
-    z-index: 999;
-    // make text upper case
-    text-transform: uppercase;
-    // used to high the navigation bar for the animation
-    transform: translateX(100%);
-    // used to specify what propertie should animate
-    // for a duration of .5 sec ease-in-out
-    transition: transform .5 ease-in-out;
-
-
-    // nest used to style the list elements
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin-top: 8em;
-
-        // used to style the links within the list
-        a {
-            color: white;
-            // padding on a link element will not work unless its display block
-            padding: .75em 2em;
-            display: block;
-
-            // on this a element we are going to have a hover 
-            &:hover {
-                background: rgb(42, 41, 41);
-            }
-        }
-    }
-
-    .close {
-        float: right;
-        margin: 2em;
-        width: 2.5em;
-
-        path {
-            fill: white;
-        }
-    }
-
-}
-
+// Header
 header {
+
     //used to structure the layout
     display: flex;
     // used to create space between logo and nav
     justify-content: space-between;
 
-    // nesting svg inside of header
-    // Understood as any svg inside of header
-    // Menu Button for smaller resolutions
+    //Menu btn resize and placement
     svg {
         width: 2.3em;
         margin-top: -.6em;
         cursor: pointer;
     }
+
+    //Top corner Logo
+    .logo {
+        color: white;
+        font-weight: bold;
+        font-family: 'Darumadrop One', cursive;
+        font-size: 4rem;
+        text-decoration: none;
+    }
+
+    // Navigation
+    nav {
+        // Used to stop nav from dissapearing when scrolling
+        position: fixed;
+        // position from the top
+        top: 0;
+        // position from the right
+        right: 0;
+    
+        background: black;
+        height: 100vh;
+        width:60%;
+        // ensure when called upon it is the top displayed layer
+        z-index: 999;
+        // make text upper case
+        text-transform: uppercase;
+        // used to high the navigation bar for the animation
+        transform: translateX(100%);
+        // used to specify what propertie should animate
+        // for a duration of .5 sec ease-in-out
+        transition: transform .5 ease-in-out;
+    
+    
+        // nest used to style the list elements
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 8em;
+    
+            // used to style the links within the list
+            a {
+                color: white;
+                // padding on a link element will not work unless its display block
+                padding: .75em 2em;
+                display: block;
+    
+                // on this a element we are going to have a hover 
+                &:hover {
+                    background: rgb(42, 41, 41);
+                }
+            }
+        }
+    
+        .close {
+            float: right;
+            margin: 2em;
+            width: 2.5em;
+    
+            path {
+                fill: white;
+            }
+        }
+    
+    }
 }
 
-h1 {
-    font-size: 1.8rem;
-    margin-top: 2em;
-    line-height: 3.3rem;
-    text-align: center;
-}
-
-.subhead {
-    font-size: 1.4rem;
-}
-
-span {
-    color: orange;
-}
-
+// Hero 
 section.hero {
     color: white;
-    height: 90vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: moveDown 1s ease-in-out forwards;
     opacity: 0;
+
+    // Hero Text
+    .heroTxt {
+        // text properties
+        color: white;
+        font-family: 'Darumadrop One', cursive;
+        font-size: 7.5rem;
+        font-weight: bold;
+        // text alignment
+        text-align: center;
+
+        span{
+            color: white;
+        }
+    }
 
     .down-arrow {
         stroke: white;
         position: fixed;
-        align-tracks: center;
-        bottom: 2em;
-        width: 2em;
+        left: 50%; /* position the element 50% from the left */
+        bottom: 6em;
+        transform: translateX(-50%); /* center the element horizontally */
         height: 5em;
         animation: bouncyArrow 1.8s alternate-reverse infinite;
-
+        font-size: .5rem;
+      
         path {
-            fill: white;
+          fill: white;
         }
-    }
+      }
+    }      
 
-}
-
-    // position: absolute;
-    //     background: url('../images/darkStar.jpg');
-    //     background-size: cover;
-    //     background-position-x: 20%;
-    //     background-position-y: 20%;
-    //     // used to fix the img to width of screen
-    //     width: 100%;
-    //     // used to fit the img to the height of the viewport
-    //     height: 100vh;
-    //     // used for send back or forwards
-    //     z-index: -1;
-    //     animation: introLoad 2s forwards;
 
 .projects-section {
-    background: url(../images/darkStar.jpg);
-    background-size: cover;
     z-index: -1;
     background-position-x: 20%;
     background-position-y: 20%;
@@ -189,8 +138,8 @@ section.hero {
     animation: introLoad 2s forwards;
     .projects-div {
  
-
         .title {
+            font-family: 'Darumadrop One', cursive;
             position: relative;
             font-weight: bold;
             font-size: 4.25rem;
@@ -217,7 +166,7 @@ section.hero {
 
                     // on this a element we are going to have a hover 
                     &:hover {
-                        color: orange;
+                        color: green;
                     }
                 }
             }
@@ -227,7 +176,6 @@ section.hero {
 
 // About section "who i am what i do"
 .about-section {
-    background: url(../images/darkStar.jpg);
     background-size: cover;
     z-index: -1;
     background-position-x: 100%;
@@ -274,8 +222,6 @@ section.hero {
 // This section is for the last section of website
 // Connect with me etc
 .connection-section {
-    background: url(../images/darkStar.jpg);
-    background-size: cover;
     z-index: -1;
     background-position-x: 20%;
     background-position-y: 20%;
@@ -298,7 +244,7 @@ section.hero {
             text-align: center;
 
             &:hover{
-                color: orange;
+                color: green;
                 span{
                     color: white;
                 }
@@ -350,33 +296,33 @@ section.hero {
                     width: 2em;
                     height: 2em;
                     path {
-                        fill: orange;
+                        fill: white;
                     }
                 }
                 .twitter-logo{
                     width: 2em;
                     height: 2em;
                     path {
-                        fill: orange;
+                        fill: white;
                     }
                 }
                 .fiverr-logo{
                     width: 2em;
                     height: 2em;
                     path {
-                        fill: orange;  
+                        fill: white;  
                     }
                 }
                 .IG-logo{
                     width: 2em;
                     height: 2em;
                     path {
-                        fill: orange;
+                        fill: white;
                     }     
                 }
 
                 .IG-logo:hover{
-                    fill: orange;
+                    fill: green;
                   } 
                     
         
@@ -413,7 +359,7 @@ footer{
 @media only screen and (min-width:920px) {
     body {
         // added 5 em white space to left and right of body when dimension exceeds 680
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Darumadrop One', cursive;
 
     }
 
@@ -461,20 +407,6 @@ footer{
         }
     }
 
-    .hero-img {
-        left: unset;
-        right: 0;
-        width: 100%;
-        height:100vh;
-    }
-
-    .logo {
-        color: white;
-
-        span {
-            color: orange;
-        }
-    }
 
     section.hero {
         color: white;

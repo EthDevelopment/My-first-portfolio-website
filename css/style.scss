@@ -30,61 +30,6 @@ header {
         font-size: 4rem;
         text-decoration: none;
     }
-
-    // Navigation
-    nav {
-        // Used to stop nav from dissapearing when scrolling
-        position: fixed;
-        // position from the top
-        top: 0;
-        // position from the right
-        right: 0;
-    
-        background: black;
-        height: 100vh;
-        width:60%;
-        // ensure when called upon it is the top displayed layer
-        z-index: 999;
-        // make text upper case
-        text-transform: uppercase;
-        // used to high the navigation bar for the animation
-        transform: translateX(100%);
-        // used to specify what propertie should animate
-        // for a duration of .5 sec ease-in-out
-        transition: transform .5 ease-in-out;
-    
-    
-        // nest used to style the list elements
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 8em;
-    
-            // used to style the links within the list
-            a {
-                color: white;
-                // padding on a link element will not work unless its display block
-                padding: .75em 2em;
-                display: block;
-    
-                // on this a element we are going to have a hover 
-                &:hover {
-                    background: rgb(42, 41, 41);
-                }
-            }
-        }
-    
-        .close {
-            float: right;
-            margin: 2em;
-            width: 2.5em;
-    
-            path {
-                fill: white;
-            }
-        }
-    
-    }
 }
 
 // Hero 
@@ -128,7 +73,7 @@ section.hero {
       }
     }      
 
-
+// Projects
 .projects-section {
     z-index: -1;
     background-position-x: 20%;
@@ -136,9 +81,11 @@ section.hero {
     width: 100%;
     height: 100vh;
     animation: introLoad 2s forwards;
+
     .projects-div {
  
         .title {
+            color: white;
             font-family: 'Darumadrop One', cursive;
             position: relative;
             font-weight: bold;
@@ -146,6 +93,20 @@ section.hero {
             display: block;
             text-align: center;
             top: 0;
+        
+        }
+
+        .projects-portfolio{
+            .picture-container {
+                display: inline-block;
+              }
+
+            .picture{
+                width: 15rem;
+                height: 15rem;
+            }
+
+            }
         }
 
         .projects {
@@ -172,7 +133,6 @@ section.hero {
             }
         }
     }
-}
 
 // About section "who i am what i do"
 .about-section {
@@ -338,7 +298,7 @@ footer{
 
 // CSS for JS animation of menu 
 .open-nav {
-    transform: translateX(0%)
+    transform: translateX(50%)
 }
 
 
@@ -357,6 +317,10 @@ footer{
 }
 
 @media only screen and (min-width:920px) {
+    .NavBarUL {
+        margin-right: 50%;
+    }
+
     body {
         // added 5 em white space to left and right of body when dimension exceeds 680
         font-family: 'Darumadrop One', cursive;
@@ -375,7 +339,7 @@ footer{
     // makes the nav show up at 920px
     nav {
         transform: translateX(0);
-
+        
         //in order to change nav from appearing as the mobile version
         position: unset;
         display: block;

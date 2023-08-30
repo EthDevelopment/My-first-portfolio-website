@@ -5,7 +5,6 @@ body {
   background: url("../images/darkStar.jpg");
   background-size: cover;
   background-position: 20%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -27,8 +26,7 @@ a {
   width: 140px;
 }
 .globe svg {
-  -webkit-animation: rotation 5s linear 0s infinite;
-          animation: rotation 5s linear 0s infinite;
+  animation: rotation 5s linear 0s infinite;
 }
 .globe svg path {
   stroke: orange;
@@ -43,8 +41,7 @@ a {
   width: 100%;
   height: 100vh;
   z-index: -1;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
 
 .logo {
@@ -114,8 +111,7 @@ span {
 section.hero {
   color: white;
   height: 90vh;
-  -webkit-animation: moveDown 1s ease-in-out forwards;
-          animation: moveDown 1s ease-in-out forwards;
+  animation: moveDown 1s ease-in-out forwards;
   opacity: 0;
 }
 section.hero .down-arrow {
@@ -139,8 +135,7 @@ section.hero .down-arrow path {
   background-position-y: 20%;
   width: 100%;
   height: 100vh;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
 .projects-section .projects-div .title {
   position: relative;
@@ -177,8 +172,7 @@ section.hero .down-arrow path {
   background-position-y: 100%;
   width: 100%;
   height: 120vh;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
 .about-section .about-div .title {
   position: relative;
@@ -218,8 +212,7 @@ section.hero .down-arrow path {
   background-position-y: 20%;
   width: 100%;
   height: 100vh;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
 .connection-section .connect-div {
   width: 100%;
@@ -291,11 +284,11 @@ section.hero .down-arrow path {
 .connection-section .connect-div .connect-links a .twitter-logo path {
   fill: orange;
 }
-.connection-section .connect-div .connect-links a .fiverr-logo {
+.connection-section .connect-div .connect-links a .youtube-logo {
   width: 2em;
   height: 2em;
 }
-.connection-section .connect-div .connect-links a .fiverr-logo path {
+.connection-section .connect-div .connect-links a .youtube-logo path {
   fill: orange;
 }
 .connection-section .connect-div .connect-links a .IG-logo {
@@ -326,15 +319,12 @@ footer {
   body {
     font-family: "Poppins", sans-serif;
   }
-
   .menu {
     display: none;
   }
-
   ul.top-tag {
     display: none;
   }
-
   nav {
     transform: translateX(0);
     position: unset;
@@ -359,21 +349,18 @@ footer {
     background: none;
     text-decoration: underline;
   }
-
   .hero-img {
     left: unset;
     right: 0;
     width: 100%;
     height: 100vh;
   }
-
   .logo {
     color: white;
   }
   .logo span {
     color: orange;
   }
-
   section.hero {
     color: white;
     height: 90vh;
@@ -381,11 +368,9 @@ footer {
     margin-bottom: 8em;
     padding-bottom: 2.5em;
   }
-
   .about-section {
     font-size: 2em;
   }
-
   .about-div {
     margin: 0 1em;
   }
@@ -395,23 +380,11 @@ footer {
     width: 1200px;
     margin: 0 auto;
   }
-
   .about-section {
     font-size: 2em;
   }
-
   .about-div {
     margin: 0 5em;
-  }
-}
-@-webkit-keyframes introLoad {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 @keyframes introLoad {
@@ -424,16 +397,6 @@ footer {
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
-@-webkit-keyframes bouncyArrow {
-  from {
-    opacity: 0;
-    transform: translateY(-35px);
-  }
-  to {
-    transform: translateY(-15px);
-    opacity: 1;
-  }
-}
 @keyframes bouncyArrow {
   from {
     opacity: 0;
@@ -444,15 +407,6 @@ footer {
     opacity: 1;
   }
 }
-@-webkit-keyframes moveDown {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @keyframes moveDown {
   from {
     transform: translateY(-100px);
@@ -460,14 +414,6 @@ footer {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-@-webkit-keyframes rotation {
-  from {
-    transform: translateX(0);
-  }
-  from {
-    transform: translateX(-50%);
   }
 }
 @keyframes rotation {
